@@ -3,7 +3,7 @@ package com.vinsguru.orderservice.config;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.vinsguru.orderservice.model.customer.Customer;
-import org.springframework.boot.jackson.JsonMixin;
+import org.springframework.boot.jackson.JacksonMixin;
 
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.DEDUCTION,
@@ -13,6 +13,6 @@ import org.springframework.boot.jackson.JsonMixin;
         @JsonSubTypes.Type(Customer.Regular.class),
         @JsonSubTypes.Type(Customer.Business.class),
 })
-@JsonMixin(Customer.class)
+@JacksonMixin(Customer.class)
 public class CustomerMixIn {
 }

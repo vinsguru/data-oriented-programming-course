@@ -3,8 +3,7 @@ package com.vinsguru.orderservice.config;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.vinsguru.orderservice.model.invoice.Invoice;
-import com.vinsguru.orderservice.model.product.Product;
-import org.springframework.boot.jackson.JsonMixin;
+import org.springframework.boot.jackson.JacksonMixin;
 
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.DEDUCTION,
@@ -14,6 +13,6 @@ import org.springframework.boot.jackson.JsonMixin;
         @JsonSubTypes.Type(Invoice.Paid.class),
         @JsonSubTypes.Type(Invoice.Unpaid.class),
 })
-@JsonMixin(Invoice.class)
+@JacksonMixin(Invoice.class)
 public class InvoiceMixIn {
 }

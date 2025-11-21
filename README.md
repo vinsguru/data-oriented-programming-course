@@ -1,6 +1,6 @@
 # Data Oriented Programming
 
-This repository contains the code samples, assignments etc for my course.
+This repository includes the code samples and assignments for [the course](https://www.udemy.com/course/java-data-oriented-programming/?referralCode=D2D41CA0198ED97DCB4F). All Spring projects are updated to use **Spring Boot 4.x**.
 
 ![](.doc/java-dop.png)
 
